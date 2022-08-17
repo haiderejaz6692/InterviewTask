@@ -19,6 +19,7 @@ Scenario: Get user list and verify particular user
     | 1       | 200         | 6          | Janet      | Weaver    | janet.weaver@reqres.in | https://reqres.in/img/faces/2-image.jpg  |
     | 2       | 200         | 6          | Byron      | Fields    | byron.fields@reqres.in | https://reqres.in/img/faces/10-image.jpg |
 
+@Task1
 Scenario: Verify Users on Page
     When I send a Get user list request from page "<Page_No>"
     Then Verify Response code is "<Status_Code>"

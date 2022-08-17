@@ -148,17 +148,24 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify Users on Page")]
+        [NUnit.Framework.CategoryAttribute("Task1")]
         [NUnit.Framework.TestCaseAttribute("12", "200", "0", null)]
         [NUnit.Framework.TestCaseAttribute("1", "200", "6", null)]
         public void VerifyUsersOnPage(string page_No, string status_Code, string user_Count, string[] exampleTags)
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] @__tags = new string[] {
+                    "Task1"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Page_No", page_No);
             argumentsOfScenario.Add("Status_Code", status_Code);
             argumentsOfScenario.Add("User_Count", user_Count);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Users on Page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 22
+#line 23
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -171,16 +178,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 23
+#line 24
     testRunner.When(string.Format("I send a Get user list request from page \"{0}\"", page_No), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 24
+#line 25
     testRunner.Then(string.Format("Verify Response code is \"{0}\"", status_Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 25
+#line 26
     testRunner.Then(string.Format("Verify Page No \"{0}\"", page_No), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 26
+#line 27
     testRunner.Then(string.Format("Verify it returns \"{0}\" users in total as response", user_Count), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

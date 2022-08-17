@@ -1,6 +1,5 @@
 ﻿Feature: Evernote Online Notes Functionality
 
-
 @Task2
 Scenario: Verify User Can Login To App With Right Credentials
 	Given User Lands On Login Page
