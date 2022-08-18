@@ -82,6 +82,7 @@ namespace InterviewTask.PageObjects.Pages
         public void ClickMoveToTrash()
         {
             btnNotesDeleteOption.Click();
+            Utilities.StaticWait(5000);
         }
 
         public void ClickOnNoteSpan(string title)

@@ -41,18 +41,37 @@ namespace InterviewTask.Support
             return request;
         }
 
+        public RestRequest CreateGetRequest(string[] param)
+        {
+            request = new RestRequest()
+            {
+                Method = Method.Get
+            };
+
+            request.AddObject(param);
+
+
+            /* request.AddHeaders(new Dictionary<string, string>
+             {
+                 { "Accept", "application/json" },
+                 { "Content-Type", "application/json" }
+
+             });*/
+            return request;
+        }
+
         public RestRequest CreateGetRequest()
         {
             request = new RestRequest()
             {
                 Method = Method.Get
             };
-             request.AddHeaders(new Dictionary<string, string>
+            /* request.AddHeaders(new Dictionary<string, string>
              {
                  { "Accept", "application/json" },
                  { "Content-Type", "application/json" }
 
-             });
+             });*/
             return request;
         }
 
