@@ -5,6 +5,7 @@
 **Covered Features:**
 - Evernote Online Notes Functionality
 - To Verify Users API
+- Current weather data Functionality
 
 **Technology stack:**
 - Basic: C#, .NET Core 3.1, NUnit
@@ -21,9 +22,10 @@
 ### Test Execution
 1. To Run Full end to end type in cmd `dotnet test` in the root folder.
 2. To Run Specific Task type in cmd `dotnet test --filter TestCategory=SpecificTags`
-   There are two tags in whole projects
+   There are Three tags in whole projects
    a. `@Task1` to run First Task
    b. `@Task2` to run Second Task
+   c. `@BounsReq` to run third Bonus Task
 
 ### Generate Report
 1. After Test to create LivingDoc and Detail Analysis open CMD in `project_path\project\bin\Debug\netcoreapp3.1`
